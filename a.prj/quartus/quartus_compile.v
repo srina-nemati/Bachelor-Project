@@ -15,7 +15,7 @@ module quartus_compile (
 	, input logic [31:0] resize_rows
 	, input logic [31:0] resize_cols
 	);
-
+ 
 	logic [31:0] resize_original_image_data_reg;
 	logic [0:0] resize_original_image_ready_reg;
 	logic [0:0] resize_original_image_valid_reg;

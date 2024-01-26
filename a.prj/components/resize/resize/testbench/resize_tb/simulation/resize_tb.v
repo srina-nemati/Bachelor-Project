@@ -13,7 +13,7 @@ module resize_tb (
 	parameter RATIO = 32'd128;
 	reg [31:0] inputTestIMG [0:ROW*COL];
 
-	integer j,i;
+	integer j,i; 
 	initial begin
 		for (j = 0; j < ROW*COL; j = j + 1) begin
 			inputTestIMG[j] = 32'hffffffff;
