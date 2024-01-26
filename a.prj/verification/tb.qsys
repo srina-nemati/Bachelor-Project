@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element clock_reset_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element component_dpi_controller_resize_inst
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element concatenate_component_done_inst
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element concatenate_component_wait_for_stream_writes_inst
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element main_dpi_controller_inst
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element resize_component_dpi_controller_bind_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element resize_component_dpi_controller_enable_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element resize_component_dpi_controller_implicit_ready_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element resize_component_dpi_controller_stream_active_concatenate_inst
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element resize_inst
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element split_component_start_inst
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element stream_sink_dpi_bfm_resize_resized_image_inst
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_resize_cols_inst
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_resize_original_image_inst
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_resize_ratio_inst
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_resize_rows_inst
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CGXFC3B6F23C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <module
+   name="clock_reset_inst"
+   kind="hls_sim_clock_reset"
+   version="1.0"
+   enabled="1">
+  <parameter name="RESET_CYCLE_HOLD" value="4" />
+ </module>
+ <module
+   name="component_dpi_controller_resize_inst"
+   kind="hls_sim_component_dpi_controller"
+   version="1.0"
+   enabled="1">
+  <parameter name="AUTO_COMPONENT_IRQ_INTERRUPTS_USED" value="0" />
+  <parameter name="COMPONENT_HAS_SLAVE_RETURN" value="0" />
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="COMPONENT_NUM_OUTPUT_STREAMS" value="1" />
+  <parameter name="COMPONENT_NUM_SLAVES" value="0" />
+  <parameter name="RETURN_DATAWIDTH" value="64" />
+ </module>
+ <module
+   name="concatenate_component_done_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="concatenate_component_wait_for_stream_writes_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="main_dpi_controller_inst"
+   kind="hls_sim_main_dpi_controller"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAMES_STR" value="resize" />
+  <parameter name="NUM_COMPONENTS" value="1" />
+  <parameter name="SIM_COMPONENT_CALL_COUNT_LOG_FILE" value="." />
+ </module>
+ <module
+   name="resize_component_dpi_controller_bind_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="5" />
+ </module>
+ <module
+   name="resize_component_dpi_controller_enable_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="5" />
+ </module>
+ <module
+   name="resize_component_dpi_controller_implicit_ready_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="3" />
+ </module>
+ <module
+   name="resize_component_dpi_controller_stream_active_concatenate_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module name="resize_inst" kind="resize" version="1.0" enabled="1">
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CGXFC3B6F23C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6_H6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="tb_resize_inst" />
+ </module>
+ <module
+   name="split_component_start_inst"
+   kind="avalon_split_multibit_conduit"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="stream_sink_dpi_bfm_resize_resized_image_inst"
+   kind="hls_sim_stream_sink_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="INTERFACE_NAME" value="resized_image" />
+  <parameter name="READY_LATENCY" value="0" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="32" />
+  <parameter name="STREAM_DATAWIDTH" value="32" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_resize_cols_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="cols" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="32" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_resize_original_image_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="0" />
+  <parameter name="INTERFACE_NAME" value="original_image" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="32" />
+  <parameter name="STREAM_DATAWIDTH" value="32" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_resize_ratio_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="ratio" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="32" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_resize_rows_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="resize" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="rows" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="32" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="resize_inst.resized_image"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.sink" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="stream_source_dpi_bfm_resize_original_image_inst.source"
+   end="resize_inst.original_image" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="main_dpi_controller_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="resize_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_resize_cols_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_resize_original_image_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_resize_ratio_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_resize_rows_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock"
+   end="component_dpi_controller_resize_inst.clock" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="main_dpi_controller_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_resize_cols_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_resize_original_image_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_resize_ratio_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_resize_rows_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clock_reset_inst.clock2x"
+   end="component_dpi_controller_resize_inst.clock2x" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.component_call"
+   end="resize_inst.call">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.component_done"
+   end="concatenate_component_done_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="main_dpi_controller_inst.component_enabled"
+   end="split_component_start_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.component_wait_for_stream_writes"
+   end="concatenate_component_wait_for_stream_writes_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.dpi_control_bind"
+   end="resize_component_dpi_controller_bind_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.dpi_control_enable"
+   end="resize_component_dpi_controller_enable_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="stream_sink_dpi_bfm_resize_resized_image_inst.dpi_control_stream_active"
+   end="resize_component_dpi_controller_stream_active_concatenate_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="concatenate_component_done_inst.out_conduit"
+   end="main_dpi_controller_inst.component_done">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="concatenate_component_wait_for_stream_writes_inst.out_conduit"
+   end="main_dpi_controller_inst.component_wait_for_stream_writes">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_stream_active_concatenate_inst.out_conduit"
+   end="component_dpi_controller_resize_inst.dpi_control_stream_writes_active">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="split_component_start_inst.out_conduit_0"
+   end="component_dpi_controller_resize_inst.component_enabled">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_resize_cols_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_resize_cols_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_resize_cols_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_resize_original_image_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_resize_original_image_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_resize_ratio_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_resize_ratio_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_resize_ratio_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_resize_rows_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_3"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_3"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_4"
+   end="stream_source_dpi_bfm_resize_rows_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_4"
+   end="stream_source_dpi_bfm_resize_rows_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="component_dpi_controller_resize_inst.read_implicit_streams"
+   end="resize_component_dpi_controller_implicit_ready_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="main_dpi_controller_inst.reset_ctrl"
+   end="clock_reset_inst.reset_ctrl">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst.return"
+   end="component_dpi_controller_resize_inst.component_return">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="stream_source_dpi_bfm_resize_cols_inst.source_data"
+   end="resize_inst.cols">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="stream_source_dpi_bfm_resize_ratio_inst.source_data"
+   end="resize_inst.ratio">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="stream_source_dpi_bfm_resize_rows_inst.source_data"
+   end="resize_inst.rows">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="main_dpi_controller_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="resize_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_resize_cols_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_resize_original_image_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_resize_ratio_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="stream_sink_dpi_bfm_resize_resized_image_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_resize_rows_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clock_reset_inst.reset"
+   end="component_dpi_controller_resize_inst.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

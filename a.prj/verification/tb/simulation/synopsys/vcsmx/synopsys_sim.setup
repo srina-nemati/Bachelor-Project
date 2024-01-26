@@ -1,0 +1,30 @@
+
+WORK > DEFAULT
+DEFAULT:                                                            ./libraries/work/                                                              
+work:                                                               ./libraries/work/                                                              
+resize_internal_inst:                                               ./libraries/resize_internal_inst/                                              
+irq_mapper:                                                         ./libraries/irq_mapper/                                                        
+stream_source_dpi_bfm_resize_cols_inst:                             ./libraries/stream_source_dpi_bfm_resize_cols_inst/                            
+stream_sink_dpi_bfm_resize_resized_image_inst:                      ./libraries/stream_sink_dpi_bfm_resize_resized_image_inst/                     
+split_component_start_inst:                                         ./libraries/split_component_start_inst/                                        
+resize_inst:                                                        ./libraries/resize_inst/                                                       
+resize_component_dpi_controller_implicit_ready_conduit_fanout_inst: ./libraries/resize_component_dpi_controller_implicit_ready_conduit_fanout_inst/
+resize_component_dpi_controller_bind_conduit_fanout_inst:           ./libraries/resize_component_dpi_controller_bind_conduit_fanout_inst/          
+main_dpi_controller_inst:                                           ./libraries/main_dpi_controller_inst/                                          
+concatenate_component_done_inst:                                    ./libraries/concatenate_component_done_inst/                                   
+component_dpi_controller_resize_inst:                               ./libraries/component_dpi_controller_resize_inst/                              
+clock_reset_inst:                                                   ./libraries/clock_reset_inst/                                                  
+altera_ver:                                                         ./libraries/altera_ver/                                                        
+lpm_ver:                                                            ./libraries/lpm_ver/                                                           
+sgate_ver:                                                          ./libraries/sgate_ver/                                                         
+altera_mf_ver:                                                      ./libraries/altera_mf_ver/                                                     
+altera_lnsim_ver:                                                   ./libraries/altera_lnsim_ver/                                                  
+cyclonev_ver:                                                       ./libraries/cyclonev_ver/                                                      
+cyclonev_hssi_ver:                                                  ./libraries/cyclonev_hssi_ver/                                                 
+cyclonev_pcie_hip_ver:                                              ./libraries/cyclonev_pcie_hip_ver/                                             
+altera:                                                             ./libraries/altera/                                                            
+lpm:                                                                ./libraries/lpm/                                                               
+sgate:                                                              ./libraries/sgate/                                                             
+altera_mf:                                                          ./libraries/altera_mf/                                                         
+altera_lnsim:                                                       ./libraries/altera_lnsim/                                                      
+cyclonev:                                                           ./libraries/cyclonev/                                                          

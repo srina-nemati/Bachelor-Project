@@ -1,0 +1,20 @@
+	component resize is
+		port (
+			start                : in  std_logic                     := 'X';             -- valid
+			busy                 : out std_logic;                                        -- stall
+			clock                : in  std_logic                     := 'X';             -- clk
+			cols                 : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
+			original_image_data  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
+			original_image_ready : out std_logic;                                        -- ready
+			original_image_valid : in  std_logic                     := 'X';             -- valid
+			ratio                : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
+			resetn               : in  std_logic                     := 'X';             -- reset_n
+			resized_image_data   : out std_logic_vector(31 downto 0);                    -- data
+			resized_image_ready  : in  std_logic                     := 'X';             -- ready
+			resized_image_valid  : out std_logic;                                        -- valid
+			done                 : out std_logic;                                        -- valid
+			stall                : in  std_logic                     := 'X';             -- stall
+			rows                 : in  std_logic_vector(31 downto 0) := (others => 'X')  -- data
+		);
+	end component resize;
+

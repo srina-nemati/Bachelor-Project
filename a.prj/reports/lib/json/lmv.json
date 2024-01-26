@@ -1,0 +1,77 @@
+{
+  "nodes":
+  [
+    {
+      "type":"interface"
+      , "id":23
+      , "name":"cols"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":21
+      , "name":"ratio"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":22
+      , "name":"rows"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

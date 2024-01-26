@@ -1,0 +1,184 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 368 448)
+	(text "resize" (rect 167 -1 189 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 432 20 444)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "start" (rect 0 0 17 12)(font "Arial" (font_size 8)))
+		(text "start" (rect 4 61 34 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 144 72)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "clock" (rect 4 117 34 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 144 128)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "cols[31..0]" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "cols[31..0]" (rect 4 157 70 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 144 168)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "original_image_data[31..0]" (rect 0 0 101 12)(font "Arial" (font_size 8)))
+		(text "original_image_data[31..0]" (rect 4 197 160 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 144 208)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "original_image_valid" (rect 0 0 79 12)(font "Arial" (font_size 8)))
+		(text "original_image_valid" (rect 4 229 124 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 144 240)(line_width 1))
+	)
+	(port
+		(pt 0 280)
+		(input)
+		(text "ratio[31..0]" (rect 0 0 40 12)(font "Arial" (font_size 8)))
+		(text "ratio[31..0]" (rect 4 269 76 280)(font "Arial" (font_size 8)))
+		(line (pt 0 280)(pt 144 280)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "resetn" (rect 0 0 24 12)(font "Arial" (font_size 8)))
+		(text "resetn" (rect 4 309 40 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 144 320)(line_width 1))
+	)
+	(port
+		(pt 368 88)
+		(input)
+		(text "resized_image_ready" (rect 0 0 86 12)(font "Arial" (font_size 8)))
+		(text "resized_image_ready" (rect 260 77 374 88)(font "Arial" (font_size 8)))
+		(line (pt 368 88)(pt 224 88)(line_width 1))
+	)
+	(port
+		(pt 0 376)
+		(input)
+		(text "stall" (rect 0 0 14 12)(font "Arial" (font_size 8)))
+		(text "stall" (rect 4 365 34 376)(font "Arial" (font_size 8)))
+		(line (pt 0 376)(pt 144 376)(line_width 1))
+	)
+	(port
+		(pt 0 416)
+		(input)
+		(text "rows[31..0]" (rect 0 0 42 12)(font "Arial" (font_size 8)))
+		(text "rows[31..0]" (rect 4 405 70 416)(font "Arial" (font_size 8)))
+		(line (pt 0 416)(pt 144 416)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "busy" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "busy" (rect 4 77 28 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 144 88)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "original_image_ready" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "original_image_ready" (rect 4 213 124 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 144 224)(line_width 1))
+	)
+	(port
+		(pt 368 72)
+		(output)
+		(text "resized_image_data[31..0]" (rect 0 0 102 12)(font "Arial" (font_size 8)))
+		(text "resized_image_data[31..0]" (rect 239 61 389 72)(font "Arial" (font_size 8)))
+		(line (pt 368 72)(pt 224 72)(line_width 3))
+	)
+	(port
+		(pt 368 104)
+		(output)
+		(text "resized_image_valid" (rect 0 0 80 12)(font "Arial" (font_size 8)))
+		(text "resized_image_valid" (rect 266 93 380 104)(font "Arial" (font_size 8)))
+		(line (pt 368 104)(pt 224 104)(line_width 1))
+	)
+	(port
+		(pt 0 360)
+		(output)
+		(text "done" (rect 0 0 18 12)(font "Arial" (font_size 8)))
+		(text "done" (rect 4 349 28 360)(font "Arial" (font_size 8)))
+		(line (pt 0 360)(pt 144 360)(line_width 1))
+	)
+	(drawing
+		(text "call" (rect 126 43 276 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 149 67 328 144)(font "Arial" (color 0 0 0)))
+		(text "stall" (rect 149 83 328 176)(font "Arial" (color 0 0 0)))
+		(text "clock" (rect 116 99 262 211)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 149 123 316 256)(font "Arial" (color 0 0 0)))
+		(text "cols" (rect 122 139 268 291)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 149 163 322 336)(font "Arial" (color 0 0 0)))
+		(text "original_image" (rect 60 179 204 371)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 149 203 322 416)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 149 219 328 448)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 149 235 328 480)(font "Arial" (color 0 0 0)))
+		(text "ratio" (rect 119 251 268 515)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 149 275 322 560)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 115 291 260 595)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 149 315 340 640)(font "Arial" (color 0 0 0)))
+		(text "resized_image" (rect 225 43 528 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 203 67 430 144)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 196 83 422 176)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 201 99 432 208)(font "Arial" (color 0 0 0)))
+		(text "return" (rect 110 331 256 675)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 149 355 328 720)(font "Arial" (color 0 0 0)))
+		(text "stall" (rect 149 371 328 752)(font "Arial" (color 0 0 0)))
+		(text "rows" (rect 116 387 256 787)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 149 411 322 832)(font "Arial" (color 0 0 0)))
+		(text " resize " (rect 340 432 728 874)(font "Arial" ))
+		(line (pt 144 32)(pt 224 32)(line_width 1))
+		(line (pt 224 32)(pt 224 432)(line_width 1))
+		(line (pt 144 432)(pt 224 432)(line_width 1))
+		(line (pt 144 32)(pt 144 432)(line_width 1))
+		(line (pt 145 52)(pt 145 92)(line_width 1))
+		(line (pt 146 52)(pt 146 92)(line_width 1))
+		(line (pt 145 108)(pt 145 132)(line_width 1))
+		(line (pt 146 108)(pt 146 132)(line_width 1))
+		(line (pt 145 148)(pt 145 172)(line_width 1))
+		(line (pt 146 148)(pt 146 172)(line_width 1))
+		(line (pt 145 188)(pt 145 244)(line_width 1))
+		(line (pt 146 188)(pt 146 244)(line_width 1))
+		(line (pt 145 260)(pt 145 284)(line_width 1))
+		(line (pt 146 260)(pt 146 284)(line_width 1))
+		(line (pt 145 300)(pt 145 324)(line_width 1))
+		(line (pt 146 300)(pt 146 324)(line_width 1))
+		(line (pt 223 52)(pt 223 108)(line_width 1))
+		(line (pt 222 52)(pt 222 108)(line_width 1))
+		(line (pt 145 340)(pt 145 380)(line_width 1))
+		(line (pt 146 340)(pt 146 380)(line_width 1))
+		(line (pt 145 396)(pt 145 420)(line_width 1))
+		(line (pt 146 396)(pt 146 420)(line_width 1))
+		(line (pt 0 0)(pt 368 0)(line_width 1))
+		(line (pt 368 0)(pt 368 448)(line_width 1))
+		(line (pt 0 448)(pt 368 448)(line_width 1))
+		(line (pt 0 0)(pt 0 448)(line_width 1))
+	)
+)

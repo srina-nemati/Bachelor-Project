@@ -1,0 +1,159 @@
+Flow report for quartus_compile
+Thu Jan 25 19:54:08 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Thu Jan 25 19:54:08 2024           ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; quartus_compile                                 ;
+; Top-level Entity Name           ; quartus_compile                                 ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA4U23C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 1,259 / 15,880 ( 8 % )                          ;
+; Total registers                 ; 2920                                            ;
+; Total pins                      ; 0 / 314 ( 0 % )                                 ;
+; Total virtual pins              ; 170                                             ;
+; Total block memory bits         ; 34,240 / 2,764,800 ( 1 % )                      ;
+; Total DSP Blocks                ; 17 / 84 ( 20 % )                                ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 5 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/25/2024 19:17:36 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; quartus_compile     ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                 ;
++-------------------------------------+----------------------------------------+---------------+-------------+---------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id          ;
++-------------------------------------+----------------------------------------+---------------+-------------+---------------------+
+; COMPILER_SIGNATURE_ID               ; 5311869262109.170619765615016          ; --            ; --          ; --                  ;
+; FLOW_DISABLE_ASSEMBLER              ; On                                     ; Off           ; --          ; --                  ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                  ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                  ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; component_partition ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                 ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; component_partition ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                 ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; component_partition ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                 ;
+; POST_FLOW_SCRIPT_FILE               ; quartus_sh:generate_report.tcl         ; --            ; --          ; --                  ;
++-------------------------------------+----------------------------------------+---------------+-------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:47     ; 1.0                     ; 5058 MB             ; 00:01:07                           ;
+; Partition Merge           ; 00:00:04     ; 1.0                     ; 4793 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:01:14     ; 1.2                     ; 6917 MB             ; 00:03:12                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 2.0                     ; 5399 MB             ; 00:00:21                           ;
+; Analysis & Synthesis      ; 00:00:45     ; 1.0                     ; 5076 MB             ; 00:01:05                           ;
+; Partition Merge           ; 00:00:03     ; 1.0                     ; 4800 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:01:06     ; 1.2                     ; 6934 MB             ; 00:02:58                           ;
+; TimeQuest Timing Analyzer ; 00:00:12     ; 1.9                     ; 5399 MB             ; 00:00:20                           ;
+; I/O Assignment Analysis   ; 00:00:16     ; 1.0                     ; 5334 MB             ; 00:00:15                           ;
+; Analysis & Synthesis      ; 00:00:45     ; 1.0                     ; 5071 MB             ; 00:01:08                           ;
+; Partition Merge           ; 00:00:03     ; 1.0                     ; 4803 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:01:23     ; 1.2                     ; 6845 MB             ; 00:03:32                           ;
+; TimeQuest Timing Analyzer ; 00:00:14     ; 2.0                     ; 5402 MB             ; 00:00:24                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4813 MB             ; 00:00:03                           ;
+; Total                     ; 00:07:08     ; --                      ; --                  ; 00:14:34                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge           ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge           ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; I/O Assignment Analysis   ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Partition Merge           ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; Sarina-PC        ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off quartus_compile -c quartus_compile
+quartus_cdb --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile
+quartus_sta quartus_compile -c quartus_compile
+quartus_map --read_settings_files=on --write_settings_files=off quartus_compile -c quartus_compile
+quartus_cdb --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile
+quartus_sta quartus_compile -c quartus_compile
+quartus_fit --read_settings_files=on --write_settings_files=off quartus_compile -c quartus_compile --plan
+quartus_map --read_settings_files=on --write_settings_files=off quartus_compile -c quartus_compile
+quartus_cdb --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile
+quartus_sta quartus_compile -c quartus_compile
+quartus_eda --read_settings_files=off --write_settings_files=off quartus_compile -c quartus_compile
+
+
+

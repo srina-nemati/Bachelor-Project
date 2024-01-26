@@ -1,0 +1,2107 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [8.07184, 5.19293, 3.36309, 1.55642, 18.75]
+  , "total":
+  [5690, 7370, 8, 21]
+  , "name":"System"
+  , "max_resources":
+  [109572, 219144, 514, 112]
+  , "children":
+  [
+    {
+      "name":"resize"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [8.07184, 5.19293, 3.36309, 1.55642, 18.75]
+      , "total_kernel_resources":
+      [5690, 7370, 8, 20.5]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 96 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Stream 'original_image'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 32 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Stream 'resized_image'"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 32 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'accumColumn' (resize.cpp:59)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":59
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'accumRow' (resize.cpp:59)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":59
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'buf' (resize.cpp:58)"
+          , "type":"resource"
+          , "data":
+          [40, 996, 4, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":58
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Shift Register (9 or fewer tap points)"
+            }
+            , {
+              "type":"text"
+              , "text":"4 registers of width 8 and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"2 registers of width 8 and depth 727"
+            }
+            , {
+              "type":"text"
+              , "text":"2 registers of width 8 and depth 728"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 11 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'col' (resize.cpp:60)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":60
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'i' (resize.cpp:64)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":64
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'row' (resize.cpp:60)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":60
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'write_y' (resize.cpp:61)"
+          , "type":"resource"
+          , "data":
+          [7, 12, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"resize.cpp"
+                , "line":61
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 8 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"resize.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [47, 251, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [47, 188, 0, 0]
+                }
+                , {
+                  "name":"resize.cpp:59"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":59
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:64"
+                  , "type":"resource"
+                  , "data":
+                  [0, 31, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5, 2, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:59"
+                  , "type":"resource"
+                  , "data":
+                  [33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":59
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:64"
+                  , "type":"resource"
+                  , "data":
+                  [304, 129, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":64
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [66, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [169, 128, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [34, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"resize.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1797, 3127, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1797, 3127, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [351, 1673, 4, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                }
+                , {
+                  "name":"resize.cpp:113"
+                  , "type":"resource"
+                  , "data":
+                  [12.1111, 9.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":113
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:114"
+                  , "type":"resource"
+                  , "data":
+                  [11.7778, 9.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:115"
+                  , "type":"resource"
+                  , "data":
+                  [11.7778, 9.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:116"
+                  , "type":"resource"
+                  , "data":
+                  [11.7778, 9.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:118"
+                  , "type":"resource"
+                  , "data":
+                  [34.5, 118, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":118
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:119"
+                  , "type":"resource"
+                  , "data":
+                  [34.5, 118, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":119
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:58"
+                  , "type":"resource"
+                  , "data":
+                  [63.6111, 522.833, 2, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:59"
+                  , "type":"resource"
+                  , "data":
+                  [8.66667, 33.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":59
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:60"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":60
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:61"
+                  , "type":"resource"
+                  , "data":
+                  [2.08333, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:64"
+                  , "type":"resource"
+                  , "data":
+                  [45, 135, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":64
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:67"
+                  , "type":"resource"
+                  , "data":
+                  [18.6111, 138.333, 0.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":67
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:68"
+                  , "type":"resource"
+                  , "data":
+                  [15.7778, 129.833, 0.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":68
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:69"
+                  , "type":"resource"
+                  , "data":
+                  [15.7778, 129.833, 0.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":69
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:70"
+                  , "type":"resource"
+                  , "data":
+                  [15.7778, 129.833, 0.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:78"
+                  , "type":"resource"
+                  , "data":
+                  [2.08333, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":78
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:79"
+                  , "type":"resource"
+                  , "data":
+                  [8.33333, 33.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [1.75, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:81"
+                  , "type":"resource"
+                  , "data":
+                  [8.33333, 33.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":81
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:82"
+                  , "type":"resource"
+                  , "data":
+                  [2.08333, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:85"
+                  , "type":"resource"
+                  , "data":
+                  [0.333333, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:87"
+                  , "type":"resource"
+                  , "data":
+                  [24, 101, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":87
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:88"
+                  , "type":"resource"
+                  , "data":
+                  [0.333333, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":88
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [250, 118, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [159, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [132, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [27, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"resize.cpp:58"
+                  , "type":"resource"
+                  , "data":
+                  [19.4444, 4.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":58
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.66667, 0.333333, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [13, 4, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:59"
+                  , "type":"resource"
+                  , "data":
+                  [36.6667, 10.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":59
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [36.6667, 10.6667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:60"
+                  , "type":"resource"
+                  , "data":
+                  [3.33333, 0.666667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":60
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.33333, 0.666667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:61"
+                  , "type":"resource"
+                  , "data":
+                  [1.75, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.75, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:64"
+                  , "type":"resource"
+                  , "data":
+                  [52.5, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":64
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [17, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":8
+                      , "data":
+                      [1.5, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:65"
+                  , "type":"resource"
+                  , "data":
+                  [71, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":65
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [70, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:66"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":66
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:67"
+                  , "type":"resource"
+                  , "data":
+                  [10.4444, 4.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":67
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.66667, 0.333333, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4, 4, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:68"
+                  , "type":"resource"
+                  , "data":
+                  [5.27778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":68
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:69"
+                  , "type":"resource"
+                  , "data":
+                  [5.27778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":69
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:70"
+                  , "type":"resource"
+                  , "data":
+                  [3.77778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":70
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:76"
+                  , "type":"resource"
+                  , "data":
+                  [3.33333, 0.666667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":76
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.33333, 0.666667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:78"
+                  , "type":"resource"
+                  , "data":
+                  [1.75, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":78
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.75, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:79"
+                  , "type":"resource"
+                  , "data":
+                  [61, 10.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":79
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [28, 10.6667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:80"
+                  , "type":"resource"
+                  , "data":
+                  [36.75, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":80
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.75, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:81"
+                  , "type":"resource"
+                  , "data":
+                  [61, 10.6667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":81
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [28, 10.6667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:82"
+                  , "type":"resource"
+                  , "data":
+                  [1.75, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.75, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:85"
+                  , "type":"resource"
+                  , "data":
+                  [41.6667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":85
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.66667, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:87"
+                  , "type":"resource"
+                  , "data":
+                  [61.5, 1.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":87
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0.5, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [26, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:88"
+                  , "type":"resource"
+                  , "data":
+                  [41.6667, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":88
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.66667, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:92"
+                  , "type":"resource"
+                  , "data":
+                  [145, 5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":92
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [4, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [108, 4, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:98"
+                  , "type":"resource"
+                  , "data":
+                  [22, 0, 0, 0.5]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":98
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0, 0, 0, 0.5]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:102"
+                  , "type":"resource"
+                  , "data":
+                  [1725, 456, 0, 20]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":102
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [396, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [636, 456, 0, 20]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [528, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":15
+                      , "data":
+                      [165, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:108"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":108
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:113"
+                  , "type":"resource"
+                  , "data":
+                  [6.44444, 0.333333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":113
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.66667, 0.333333, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:114"
+                  , "type":"resource"
+                  , "data":
+                  [1.77778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":114
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:115"
+                  , "type":"resource"
+                  , "data":
+                  [1.77778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":115
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:116"
+                  , "type":"resource"
+                  , "data":
+                  [1.77778, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":116
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"11-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1.33333, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.444444, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:118"
+                  , "type":"resource"
+                  , "data":
+                  [87.8333, 32.9167, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":118
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [0.5, 0.25, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":5
+                      , "data":
+                      [13.8333, 0.666667, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 32, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"resize.cpp:119"
+                  , "type":"resource"
+                  , "data":
+                  [52.5, 2.25, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":119
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0.25, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [10.5, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"resize.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [3, 8, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 8, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

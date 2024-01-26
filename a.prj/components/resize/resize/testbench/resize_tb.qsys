@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element resize_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element resize_inst_call_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element resize_inst_clock_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element resize_inst_cols_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element resize_inst_original_image_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element resize_inst_ratio_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element resize_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element resize_inst_resized_image_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element resize_inst_return_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element resize_inst_rows_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA4U23C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="resize" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module name="resize_inst" kind="resize" version="1.0" enabled="1">
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA4U23C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="resize" />
+ </module>
+ <module
+   name="resize_inst_call_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input,output" />
+  <parameter name="SIGNAL_ROLES" value="stall,valid" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+ </module>
+ <module
+   name="resize_inst_clock_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="resize_inst_cols_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="data" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="resize_inst_original_image_bfm"
+   kind="altera_avalon_st_source_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="ST_BEATSPERCYCLE" value="1" />
+  <parameter name="ST_CHANNEL_W" value="1" />
+  <parameter name="ST_ERROR_DESCRIPTOR" value="" />
+  <parameter name="ST_ERROR_W" value="1" />
+  <parameter name="ST_MAX_CHANNELS" value="0" />
+  <parameter name="ST_NUMSYMBOLS" value="1" />
+  <parameter name="ST_READY_LATENCY" value="0" />
+  <parameter name="ST_SYMBOL_W" value="32" />
+  <parameter name="USE_CHANNEL" value="0" />
+  <parameter name="USE_EMPTY" value="0" />
+  <parameter name="USE_ERROR" value="0" />
+  <parameter name="USE_PACKET" value="0" />
+  <parameter name="USE_READY" value="1" />
+  <parameter name="USE_VALID" value="1" />
+  <parameter name="VHDL_ID" value="0" />
+ </module>
+ <module
+   name="resize_inst_ratio_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="data" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <module
+   name="resize_inst_reset_bfm"
+   kind="altera_avalon_reset_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   name="resize_inst_resized_image_bfm"
+   kind="altera_avalon_st_sink_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="ST_BEATSPERCYCLE" value="1" />
+  <parameter name="ST_CHANNEL_W" value="1" />
+  <parameter name="ST_ERROR_DESCRIPTOR" value="" />
+  <parameter name="ST_ERROR_W" value="1" />
+  <parameter name="ST_MAX_CHANNELS" value="0" />
+  <parameter name="ST_NUMSYMBOLS" value="1" />
+  <parameter name="ST_READY_LATENCY" value="0" />
+  <parameter name="ST_SYMBOL_W" value="32" />
+  <parameter name="USE_CHANNEL" value="0" />
+  <parameter name="USE_EMPTY" value="0" />
+  <parameter name="USE_ERROR" value="0" />
+  <parameter name="USE_PACKET" value="0" />
+  <parameter name="USE_READY" value="1" />
+  <parameter name="USE_VALID" value="1" />
+  <parameter name="VHDL_ID" value="0" />
+ </module>
+ <module
+   name="resize_inst_return_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input,output" />
+  <parameter name="SIGNAL_ROLES" value="valid,stall" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1" />
+ </module>
+ <module
+   name="resize_inst_rows_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="true" />
+  <parameter name="ENABLE_RESET" value="true" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="data" />
+  <parameter name="SIGNAL_WIDTHS" value="32" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="resize_inst.resized_image"
+   end="resize_inst_resized_image_bfm.sink" />
+ <connection
+   kind="avalon_streaming"
+   version="17.1"
+   start="resize_inst_original_image_bfm.src"
+   end="resize_inst.original_image" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_reset_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_call_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_cols_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_original_image_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_ratio_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_resized_image_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_return_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst_rows_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="resize_inst_clock_bfm.clk"
+   end="resize_inst.clock" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst_call_bfm.conduit"
+   end="resize_inst.call">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst_cols_bfm.conduit"
+   end="resize_inst.cols">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst_ratio_bfm.conduit"
+   end="resize_inst.ratio">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst_return_bfm.conduit"
+   end="resize_inst.return">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="resize_inst_rows_bfm.conduit"
+   end="resize_inst.rows">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_original_image_bfm.clk_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_resized_image_bfm.clk_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_call_bfm.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_cols_bfm.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_ratio_bfm.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_return_bfm.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="resize_inst_reset_bfm.reset"
+   end="resize_inst_rows_bfm.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

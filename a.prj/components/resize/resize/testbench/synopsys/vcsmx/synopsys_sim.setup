@@ -1,0 +1,28 @@
+
+WORK > DEFAULT
+DEFAULT:                        ./libraries/work/                          
+work:                           ./libraries/work/                          
+altera_common_sv_packages:      ./libraries/altera_common_sv_packages/     
+resize_internal_inst:           ./libraries/resize_internal_inst/          
+resize_inst_return_bfm:         ./libraries/resize_inst_return_bfm/        
+resize_inst_resized_image_bfm:  ./libraries/resize_inst_resized_image_bfm/ 
+resize_inst_reset_bfm:          ./libraries/resize_inst_reset_bfm/         
+resize_inst_original_image_bfm: ./libraries/resize_inst_original_image_bfm/
+resize_inst_cols_bfm:           ./libraries/resize_inst_cols_bfm/          
+resize_inst_clock_bfm:          ./libraries/resize_inst_clock_bfm/         
+resize_inst_call_bfm:           ./libraries/resize_inst_call_bfm/          
+resize_inst:                    ./libraries/resize_inst/                   
+altera_ver:                     ./libraries/altera_ver/                    
+lpm_ver:                        ./libraries/lpm_ver/                       
+sgate_ver:                      ./libraries/sgate_ver/                     
+altera_mf_ver:                  ./libraries/altera_mf_ver/                 
+altera_lnsim_ver:               ./libraries/altera_lnsim_ver/              
+cyclonev_ver:                   ./libraries/cyclonev_ver/                  
+cyclonev_hssi_ver:              ./libraries/cyclonev_hssi_ver/             
+cyclonev_pcie_hip_ver:          ./libraries/cyclonev_pcie_hip_ver/         
+altera:                         ./libraries/altera/                        
+lpm:                            ./libraries/lpm/                           
+sgate:                          ./libraries/sgate/                         
+altera_mf:                      ./libraries/altera_mf/                     
+altera_lnsim:                   ./libraries/altera_lnsim/                  
+cyclonev:                       ./libraries/cyclonev/                      

@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"name":"Project Name","data":["./a"],"classes":["info-table"]},
+{"name":"Target Family, Device","data":["Cyclone V, 5CEFA9F23I7"]},
+{"name":"i++ Version","data":["17.1.0 Build 590"]},
+{"name":"Quartus Version","data":["17.1.0 Build 590"]},
+{"name":"Command","data":["i++ -ffp-contract=fast -ffp-reassociate -march=CycloneV main.cpp resize.cpp bmp_tools.cpp"]},
+{"name":"Reports Generated At", "data":["Thu Jan 25 19:12:21 2024"]}
+]}

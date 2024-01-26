@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/verification
+vtb_resize_inst
+!s110 1706197410
+!i10b 1
+!s100 X;hKAjJ`ZUdIE?flY4oDe1
+I^nDTV_]d]fc^j>=E<6M4X1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1706197385
+8tb/simulation/submodules/tb_resize_inst.v
+Ftb/simulation/submodules/tb_resize_inst.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1706197410.000000
+!s107 tb/simulation/submodules/tb_resize_inst.v|
+!s90 tb/simulation/submodules/tb_resize_inst.v|-work|resize_inst|
+!i113 1
+o-work resize_inst
+tCvgOpt 0

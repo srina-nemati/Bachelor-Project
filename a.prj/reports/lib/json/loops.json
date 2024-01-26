@@ -1,0 +1,202 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Component: resize"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"resize.B1.start"
+          , "data":
+          ["Yes", ">=1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":" "
+            }
+            , {
+              "type":"text"
+              , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to variable inner loop trip count."
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"resize.B2"
+              , "data":
+              ["Yes", "~1", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":64
+                  }
+                ]
+                , [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":64
+                  }
+                ]
+                , [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":118
+                  }
+                ]
+                , [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":119
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"II is an approximation."
+                }
+                , {
+                  "type":"text"
+                  , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to the following stallable instructions:"
+                  , "links":
+                  [
+                    {
+                      "view":"Verification statistics"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Stream Read Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"resize.cpp"
+                          , "line":"66"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Stream Write Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"resize.cpp"
+                          , "line":"108"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Fully unrolled loop"
+                  , "data":
+                  ["n/a", "n/a", "n/a"]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":101
+                      }
+                    ]
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                  ]
+                  , "children":
+                  [
+                  ]
+                }
+                , {
+                  "name":"Fully unrolled loop"
+                  , "data":
+                  ["n/a", "n/a", "n/a"]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"resize.cpp"
+                        , "line":112
+                      }
+                    ]
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                  ]
+                  , "children":
+                  [
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

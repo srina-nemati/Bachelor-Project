@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2024.01.25.19:51:54"
+ outputDirectory="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CEFA9F23I7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="call" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="start" direction="input" role="valid" width="1" />
+   <port name="busy" direction="output" role="stall" width="1" />
+  </interface>
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="cols" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="cols" direction="input" role="data" width="32" />
+  </interface>
+  <interface name="original_image" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="32" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="false" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="original_image_data" direction="input" role="data" width="32" />
+   <port name="original_image_ready" direction="output" role="ready" width="1" />
+   <port name="original_image_valid" direction="input" role="valid" width="1" />
+  </interface>
+  <interface name="ratio" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="ratio" direction="input" role="data" width="32" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="resetn" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="resized_image" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="32" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="false" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="resized_image_data" direction="output" role="data" width="32" />
+   <port name="resized_image_ready" direction="input" role="ready" width="1" />
+   <port name="resized_image_valid" direction="output" role="valid" width="1" />
+  </interface>
+  <interface name="return" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="done" direction="output" role="valid" width="1" />
+   <port name="stall" direction="input" role="stall" width="1" />
+  </interface>
+  <interface name="rows" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="rows" direction="input" role="data" width="32" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="resize:1.0:AUTO_CLOCK_CLOCK_DOMAIN=-1,AUTO_CLOCK_CLOCK_RATE=-1,AUTO_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA4U23C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1706199711,AUTO_UNIQUE_ID=(resize_internal:1.0:)"
+   instancePathKey="resize"
+   kind="resize"
+   version="1.0"
+   name="resize">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1706199711" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA4U23C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/resize.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_data_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ll_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ll_ram_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_dspba_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_staging_reg.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/hld_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/hld_fifo_zero_width.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_high_speed_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_low_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_zero_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_fanout_pipeline.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_std_synchronizer_nocut.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_tessellated_incr_decr_threshold.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_tessellated_incr_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_reset_handler.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_lfsr.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_pop.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_push.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_token_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_pipeline.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_dspba_buffer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_enable_sink.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/st_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ffwdsrc.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_full_detector.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_loop_limiter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_reset_wire.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_function_wrapper.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_function.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2_sr_1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3_sr_0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B0_runOnce.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B0_runOnce_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_wt_limpop_resize0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_wt_limpop_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_wt_limpush_resize2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_wt_limpush_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B1_start.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B1_start_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iord_bl_do_unnamed_resize1_resize14.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c0_wt_entry_resize_c0_enter_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_wt_entry_resize_c0_exit_resize10.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c0_wt_entry_resize_c0_enter_resize4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize6.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_notexitcond784_resize8.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c1_wt_entry_resize_c1_enter_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_wt_entry_resize_c1_exit_resize30.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c1_wt_entry_resize_c1_enter_resize15.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize2_resize22.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize3_resize24.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize4_resize26.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize5_resize28.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_throttle_pop_resize12.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_throttle_pop_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize7_resize32.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize8_resize34.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize9_resize36.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c0_for_body_resize_c0_enter790_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exit792_resize192.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exiA0Zize199_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exiA0Zze_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c0_for_body_resize_c0_enter790_resize124.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i11_coalesce_counter_pop27_resize126.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_0_1_pop18_resize166.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_1_1_pop17_resize170.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_2_1_pop16_resize174.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_3_1_pop15_resize178.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_0_1_coalesced_pop7_resize130.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_1_1_coalesced_pop6_resize136.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_2_1_coalesced_pop5_resize142.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_3_1_coalesced_pop4_resize148.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_0_1_pop14_resize132.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_1_1_pop13_resize138.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_2_1_pop12_resize144.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_3_1_pop11_resize150.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i11_coalesce_counter_push27_resize154.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_0_1_push18_resize168.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_1_1_push17_resize172.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_2_1_push16_resize176.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_3_1_push15_resize180.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_0_1_coalesced_push7_resize134.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_1_1_coalesced_push6_resize140.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_2_1_coalesced_push5_resize146.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_3_1_coalesced_push4_resize152.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_0_1_push14_resize164.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_1_1_push13_resize162.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_2_1_push12_resize160.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_3_1_push11_resize158.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c1_for_body_resize_c1_enter787_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exit789_resize122.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exiA0Zize197_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exiA0Zze_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c1_for_body_resize_c1_enter787_resize38.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize44.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_accumcolumn_0126_pop22_resize82.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_accumrow_0125_pop23_resize61.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_col_0124_pop24_resize70.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_i_0129_pop19_resize94.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_row_0127_pop21_resize65.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i33_fpgaindvars_iv_pop10_resize57.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i4_cleanups_pop26_resize40.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i4_initerations_pop25_resize46.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_write_y_0128_pop20_resize84.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_lastiniteration_resize53.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_notexitcond_resize117.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_accumcolumn_0126_push22_resize90.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_accumrow_0125_push23_resize78.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_col_0124_push24_resize104.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_i_0129_push19_resize109.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_row_0127_push21_resize107.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i33_fpgaindvars_iv_push10_resize112.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i4_cleanups_push26_resize120.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i4_initerations_push25_resize49.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_write_y_0128_push20_resize86.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cmp123767_resize101.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cmp123768_resize73.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cols135763_resize68.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cols135764_resize98.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_ratio133760_resize76.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_ratio133761_resize88.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_rows134762_resize63.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_sub765_resize80.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_sub766_resize59.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_unnamed_resize10_resize55.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_unnamed_resize11_resize114.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iord_bl_original_image_unnamed_resize12_resize123.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iowr_bl_resized_image_unnamed_resize13_resize193.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_throttle_push_resize195.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_throttle_push_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iowr_bl_return_unnamed_resize14_resize194.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B3_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B3_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/loop_limiter_resize0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_internal.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/components/resize/resize.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/components/resize/resize_internal_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="resize">queue size: 0 starting:resize "resize"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="resize"><![CDATA["<b>resize</b>" reuses <b>resize_internal</b> "<b>submodules/resize_internal</b>"]]></message>
+   <message level="Debug" culprit="resize">queue size: 0 starting:resize_internal "submodules/resize_internal"</message>
+   <message level="Info" culprit="resize_internal_inst"><![CDATA["<b>resize</b>" instantiated <b>resize_internal</b> "<b>resize_internal_inst</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="resize_internal:1.0:"
+   instancePathKey="resize:.:resize_internal_inst"
+   kind="resize_internal"
+   version="1.0"
+   name="resize_internal">
+  <generatedFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_data_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ll_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ll_ram_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_dspba_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_staging_reg.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/hld_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/hld_fifo_zero_width.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_high_speed_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_low_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_zero_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_fanout_pipeline.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_std_synchronizer_nocut.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_tessellated_incr_decr_threshold.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_tessellated_incr_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_reset_handler.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_lfsr.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_pop.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_push.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_token_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_pipeline.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_dspba_buffer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_enable_sink.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/st_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_ffwdsrc.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_full_detector.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_loop_limiter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/acl_reset_wire.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_function_wrapper.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_function.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2_sr_1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3_sr_0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B0_runOnce.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B0_runOnce_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_wt_limpop_resize0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_wt_limpop_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_wt_limpush_resize2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_wt_limpush_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B0_runOnce_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B1_start.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B1_start_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iord_bl_do_unnamed_resize1_resize14.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c0_wt_entry_resize_c0_enter_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_wt_entry_resize_c0_exit_resize10.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c0_wt_entry_resize_c0_enter_resize4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize6.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_notexitcond784_resize8.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c1_wt_entry_resize_c1_enter_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_wt_entry_resize_c1_exit_resize30.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c1_wt_entry_resize_c1_enter_resize15.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize2_resize22.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize3_resize24.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize4_resize26.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize5_resize28.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_throttle_pop_resize12.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i1_throttle_pop_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize7_resize32.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize8_resize34.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_src_unnamed_resize9_resize36.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B1_start_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B2_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c0_for_body_resize_c0_enter790_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exit792_resize192.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exiA0Zize199_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c0_for_body_resize_c0_exiA0Zze_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c0_for_body_resize_c0_enter790_resize124.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i11_coalesce_counter_pop27_resize126.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_0_1_pop18_resize166.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_1_1_pop17_resize170.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_2_1_pop16_resize174.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_0_0_3_1_pop15_resize178.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_0_1_coalesced_pop7_resize130.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_1_1_coalesced_pop6_resize136.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_2_1_coalesced_pop5_resize142.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_1_0_3_1_coalesced_pop4_resize148.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_0_1_pop14_resize132.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_1_1_pop13_resize138.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_2_1_pop12_resize144.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_buf_729_0_3_1_pop11_resize150.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i11_coalesce_counter_push27_resize154.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_0_1_push18_resize168.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_1_1_push17_resize172.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_2_1_push16_resize176.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_0_0_3_1_push15_resize180.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_0_1_coalesced_push7_resize134.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_1_1_coalesced_push6_resize140.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_2_1_coalesced_push5_resize146.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_1_0_3_1_coalesced_push4_resize152.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_0_1_push14_resize164.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_1_1_push13_resize162.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_2_1_push12_resize160.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_buf_729_0_3_1_push11_resize158.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_c1_for_body_resize_c1_enter787_resize.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exit789_resize122.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exiA0Zize197_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_sfc_exit_c1_for_body_resize_c1_exiA0Zze_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_sfc_logic_c1_for_body_resize_c1_enter787_resize38.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize44.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_accumcolumn_0126_pop22_resize82.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_accumrow_0125_pop23_resize61.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_col_0124_pop24_resize70.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_i_0129_pop19_resize94.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i32_row_0127_pop21_resize65.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i33_fpgaindvars_iv_pop10_resize57.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i4_cleanups_pop26_resize40.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i4_initerations_pop25_resize46.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pop_i8_write_y_0128_pop20_resize84.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_lastiniteration_resize53.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_notexitcond_resize117.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_accumcolumn_0126_push22_resize90.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_accumrow_0125_push23_resize78.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_col_0124_push24_resize104.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_i_0129_push19_resize109.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i32_row_0127_push21_resize107.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i33_fpgaindvars_iv_push10_resize112.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i4_cleanups_push26_resize120.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i4_initerations_push25_resize49.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i8_write_y_0128_push20_resize86.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cmp123767_resize101.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cmp123768_resize73.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cols135763_resize68.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_cols135764_resize98.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_ratio133760_resize76.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_ratio133761_resize88.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_rows134762_resize63.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_sub765_resize80.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_sub766_resize59.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_unnamed_resize10_resize55.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_ffwd_dst_unnamed_resize11_resize114.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iord_bl_original_image_unnamed_resize12_resize123.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iowr_bl_resized_image_unnamed_resize13_resize193.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B2_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/bb_resize_B3_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_throttle_push_resize195.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_push_i1_throttle_push_resize_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_iowr_bl_return_unnamed_resize14_resize194.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B3_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_B3_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going783_resize_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/i_acl_pipeline_keep_going_resize_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/loop_limiter_resize0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/quartus/db/ip/resize/submodules/resize_internal.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelFPGA/17.1/hls/examples/image_downsample/a.prj/components/resize/resize_internal_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="resize" as="resize_internal_inst" />
+  <messages>
+   <message level="Debug" culprit="resize">queue size: 0 starting:resize_internal "submodules/resize_internal"</message>
+   <message level="Info" culprit="resize_internal_inst"><![CDATA["<b>resize</b>" instantiated <b>resize_internal</b> "<b>resize_internal_inst</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

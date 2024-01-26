@@ -1,0 +1,517 @@
+{
+  "nodes":
+  [
+    {
+      "type":"component"
+      , "id":2
+      , "name":"resize"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"resize.B0.runOnce"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"2"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"resize.B1.start"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":7
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":""
+                    , "line":0
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"96 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"2"
+                  , "Latency":"0"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":15
+              , "name":"loop"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"20"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":16
+              , "name":"end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"6"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"6"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"resize.B2"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":9
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":66
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"9"
+                  , "Latency":"0"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":11
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"resize.cpp"
+                    , "line":108
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"23"
+                  , "Latency":"0"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":17
+              , "name":"loop"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"18"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":18
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"23"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"23"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":6
+          , "name":"resize.B3"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":13
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":""
+                    , "line":0
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"8 bits"
+                  , "Depth":"0"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"0"
+                  , "Latency":"0"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"begin"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"1"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"1"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Exit which branches back to loop. "
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":8
+      , "name":"do"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"96 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"96 bits"
+          , "Uses Packets":"No"
+          , "Uses Valid":"Yes"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":10
+      , "name":"original_image"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"32 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"32 bits"
+          , "Uses Packets":"No"
+          , "Uses Valid":"Yes"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":12
+      , "name":"resized_image"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"32 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"32 bits"
+          , "Uses Packets":"No"
+          , "Uses Ready":"Yes"
+        }
+      ]
+    }
+    , {
+      "type":"stream"
+      , "id":14
+      , "name":"return"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"8 bits"
+          , "Depth":"0"
+          , "Bits per symbol":"8 bits"
+          , "Uses Packets":"No"
+          , "Uses Ready":"Yes"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":23
+      , "name":"cols"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":21
+      , "name":"ratio"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":22
+      , "name":"rows"
+      , "debug":
+      [
+        [
+          {
+            "filename":"resize.cpp"
+            , "line":56
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"32 bits"
+          , "Component":"resize"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":8
+      , "to":7
+    }
+    , {
+      "from":10
+      , "to":9
+    }
+    , {
+      "from":11
+      , "to":12
+    }
+    , {
+      "from":13
+      , "to":14
+    }
+    , {
+      "from":21
+      , "to":7
+    }
+    , {
+      "from":22
+      , "to":7
+    }
+    , {
+      "from":23
+      , "to":7
+    }
+    , {
+      "from":20
+      , "to":15
+    }
+    , {
+      "from":3
+      , "to":15
+    }
+    , {
+      "from":7
+      , "to":16
+    }
+    , {
+      "from":18
+      , "to":17
+    }
+    , {
+      "from":16
+      , "to":17
+    }
+    , {
+      "from":9
+      , "to":18
+    }
+    , {
+      "from":11
+      , "to":18
+    }
+    , {
+      "from":18
+      , "to":19
+    }
+    , {
+      "from":13
+      , "to":20
+    }
+    , {
+      "from":15
+      , "to":7
+    }
+    , {
+      "from":17
+      , "to":9
+    }
+    , {
+      "from":9
+      , "to":11
+    }
+    , {
+      "from":19
+      , "to":13
+    }
+  ]
+}
